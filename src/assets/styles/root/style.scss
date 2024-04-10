@@ -45,6 +45,7 @@
         transform: translateY(0%);
       }
     }
+
     .circle {
       content: "";
       position: absolute;
@@ -53,12 +54,30 @@
       height: 15px;
       border-radius: 50%;
       bottom: -15px;
-      transform: translateX(-50%);
       display: none;
-      transition: 0.3s;
 
       &.active {
         display: block;
+        left: 10%;
+        transition: 0.3s;
+      }
+
+      &.move2 {
+        display: block;
+        left: 38%;
+        transition: 0.3s;
+      }
+
+      &.move3 {
+        display: block;
+        left: 70%;
+        transition: 0.3s;
+      }
+
+      &.move4 {
+        display: block;
+        left: 94%;
+        transition: 0.3s;
       }
 
       @include media(475px) {
@@ -142,10 +161,12 @@
   color: #fff;
   border-radius: 10px;
 }
+
 .upcoming {
   height: 100vh;
   display: flex;
   align-items: flex-end;
+
   &__slide {
     display: flex;
     flex-direction: column;
@@ -153,9 +174,11 @@
     z-index: 1;
     position: relative;
     color: #fff;
-    @include media(985px){
-        row-gap: 20px;
+
+    @include media(985px) {
+      row-gap: 20px;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -166,6 +189,7 @@
       background: #141414c2;
       z-index: -1;
     }
+
     &-img {
       position: absolute;
       z-index: -1;
@@ -175,30 +199,35 @@
       height: 100%;
       object-fit: cover;
     }
+
     &-title {
       font-size: 80px;
       line-height: 120%;
-      @include media(985px){
+
+      @include media(985px) {
         font-size: 50px;
-        
+
       }
-      @include media(500px){
+
+      @include media(500px) {
         font-size: 30px;
       }
     }
-    &-text{
-        max-width: 960px;
-        width: 100%;
-        font-size: 20px;
-        line-height: 30px;
-        text-align: center;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
-        overflow: hidden;
+
+    &-text {
+      max-width: 960px;
+      width: 100%;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      overflow: hidden;
     }
   }
-  .line{
+
+  .line {
     width: 100%;
     height: 2px;
     position: absolute;
@@ -206,7 +235,8 @@
     left: 0;
     bottom: 0;
   }
-  &__progress{
+
+  &__progress {
     cursor: pointer;
     border-radius: 10px;
     overflow: hidden;
@@ -215,38 +245,43 @@
     padding: 15px;
     color: #fff;
     z-index: 1;
-    @include media(505px){
-        width: unset;
+
+    @include media(505px) {
+      width: unset;
     }
-    &::after{
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        background: linear-gradient(90deg, #000000 55.64%, rgba(0, 0, 0, 0) 100%);
-        
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, #000000 55.64%, rgba(0, 0, 0, 0) 100%);
+
     }
-    &-img{
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -1;
-        width: 280px;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
+
+    &-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      width: 280px;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
     }
-    &-text{
-        font-size: 16px;
-        margin-bottom: 15px;
+
+    &-text {
+      font-size: 16px;
+      margin-bottom: 15px;
     }
-    &-title{
-        font-weight: 700;
-        font-size: 18px;
-        
+
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+
     }
   }
 }
